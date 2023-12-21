@@ -1,15 +1,12 @@
 # import
 from sources import MENU, resources
-import os
-
-
-
 
 
 def get_drink(drink):
     """function to import the drink details"""
     details = MENU[drink]
     return details
+
 
 def print_resources():
     """function prints remaining resources"""
@@ -54,7 +51,6 @@ def suffecient_resources(drink):
             return True
 
 
-
 def process_coin():
     """Calculates how much money a user have after inserting coins"""
     print("Insert Coins!")
@@ -79,7 +75,7 @@ def process_payment(inserted, cost):
 
 
 def coffee_machine():
-    """this fuctions as a coffee machine"""
+    """this functions as a coffee machine"""
     resources["money"] = 0
     should_continue = True
     while should_continue:
@@ -89,7 +85,6 @@ def coffee_machine():
         if choice == "off":
             # Clearing the Screen
             print("Coffee Machine turning off")
-            os.system('cls')
             should_continue = False
         elif choice == "report":
             print(print_resources())
@@ -104,7 +99,6 @@ def coffee_machine():
             else:
                 should_continue =False
             # print(print_resources())
-
 
 
 coffee_machine()
